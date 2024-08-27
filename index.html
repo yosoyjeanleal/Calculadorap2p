@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precio del Dólar en Venezuela</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculadora de Precio del Dólar</h1>
+        
+        <label for="bolivares">Cantidad de Bolívares:</label>
+        <input type="number" id="bolivares" placeholder="Introduce los bolívares">
+
+        <label for="precioDolar">Precio del Dólar:</label>
+        <input type="number" id="precioDolar" placeholder="Introduce el precio del dólar">
+
+        <label for="tipoComisionBanco">Comisión del Banco:</label>
+        <select id="tipoComisionBanco">
+            <option value="0">Sin Comisión</option>
+            <option value="3">Bancamiga (3%)</option>
+            <option value="1.5">BNC (1.5%)</option>
+        </select>
+
+        <label for="tipoComisionBilletera">Comisión de la Billetera:</label>
+        <select id="tipoComisionBilletera">
+            <option value="0">Sin Comisión</option>
+            <option value="2.51">Wally (2.51%)</option>
+            <option value="3.75">Zinli (3.75%)</option>
+        </select>
+
+        <button onclick="calcularPrecioDolar()">Calcular</button>
+
+        <div class="result">
+            <p><strong>Monto en Dólares:</strong> <span id="montoDolares"></span></p>
+        </div>
+        
+        <h2>Calculadora de Ganancia</h2>
+        
+        <label for="precioVenta">Precio de Venta:</label>
+        <input type="number" id="precioVenta" placeholder="Introduce el precio de venta">
+
+        <button onclick="calcularGanancia()">Calcular Ganancia</button>
+
+        <div class="result">
+            <p><strong>Ganancia:</strong> <span id="ganancia"></span></p>
+            <p><strong>Ganancia en Dólares:</strong> <span id="gananciaDolares"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
